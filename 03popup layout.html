@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>popup layout</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		body{
+			height:1000px;
+			background: linear-gradient(rgb(153,158,190),rgb(29,131,156));
+		}
+		.popup{
+			position: fixed;
+			left: 50%;
+			top:50%;
+			transform: translate(-50%,-50%);
+			width:320px;
+			border:1px solid #cccccc;
+			border-radius: 10px;
+
+		}
+		.title{
+			position: relative;
+			height:40px; 
+			background: #eeeeee;
+			padding: 0 20px; 
+			font:14px/40px "Microsoft YaHei";
+			overflow: hidden;
+			white-space:nowrap;
+			text-overflow:ellipsis;
+			border-radius: 10px 10px 0 0/10px 10px 0 0;
+		}
+		.close{
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			top:10px;
+			right:10px;
+			cursor: pointer;
+		}
+		.content{
+			background: rgba(255,255,255,0.2)
+
+		}
+		.contentP{
+			padding: 20px;
+			/* background:#FFF; */
+			font:15px/1.5 "Microsoft YaHei";
+
+		}
+		.button{
+			margin:0 auto;
+			height:50px;
+			border-radius: 10px;
+		}
+		.Button{
+			display:block;
+			margin:0 auto;
+			width: 80px;
+			height: 30px;
+			background: rgb(46,126,203);
+			color: #FFF;
+			text-align: center;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="popup">
+		<div class="title">
+			小明的故事。
+		</div>	
+		<img src="http://ico.ooopic.com/ajax/iconpng/?id=127908.png" class="close">
+		
+
+		<div class="content">
+			<div class="contentP">小明在一次车祸中失去了一条腿，<br>小明在一次车祸中又失去了一条腿,<br>又一次车祸中小明失去了他的另一条腿，<br>一次车祸中小明又失去了他的一条腿，<br>
+			它痛苦地喊啊喊啊喊啊~~~~~<br>其实小明是一条狗。
+			</div>
+			<div class="button">
+				<button class="Button">
+					确定
+				</button>
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>
