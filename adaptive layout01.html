@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>adaptive layout01</title>
 	<style>
-	/* Method 1 */
+	/* Method 1  float*/
 	*{margin: 0;padding: 0;}
 	.parent{
 		height:200px;
@@ -22,18 +22,81 @@
 		margin-left: 210px;
 		background: rgb(79,129,189);
 	}
-	/* Method2 idea calc并未完全支持*/
-/* 	.side{
-	float:left;
-	width:200px;
-	margin-right: 10px;
-	background: rgb(192,0,0);
-}
-.main{
-	float:left;
-	width:calc(100%-210px);
-	background: rgb(79,129,189);
-}  */
+	
+	/* Method2 float+calc calc并未完全支持*/
+	/* 	.side{
+		float:left;
+		width:200px;
+		margin-right: 10px;
+		background: rgb(192,0,0);
+	}
+	.main{
+		float:left;
+		width:calc(100%-210px);
+		background: rgb(79,129,189);
+	}  */
+	
+	/* Method3 flex*/
+	/* 	.parent{
+		display:flex;
+		height:200px;
+		text-align: center;
+		font:bold 30px/200px monospace;
+		color:#FFF;
+	}
+	.side{
+		width: 200px;
+		margin-right: 10px;
+		background: rgb(192,0,0);
+	}
+	.main{
+		flex:1;
+		background: rgb(79,129,189);
+	} */
+
+	/* Method4 absolute */
+	/* 	.parent{
+		position:relative;
+		height:200px;
+		text-align: center;
+		font:bold 30px/200px monospace;
+		color:#FFF;		
+	}
+	.side{
+		width:200px;
+		background: rgb(192,0,0);
+	}
+	.main{
+		position: absolute;
+		top:0;
+		left:210px;
+		right:0;
+		background: rgb(79,129,189);
+	} */
+	
+	/* Method5 absolute+flex */
+	/* 	.parent{
+	display: flex;
+	position:relative;
+	height:200px;
+	text-align: center;
+	font:bold 30px/200px monospace;
+	color:#FFF;		
+	}
+	.side{
+		position:absolute;
+		width: 200px;
+		background:rgb(192,0,0);
+	}
+	.main{
+		flex:1;
+		margin-left: 210px;
+		background: rgb(79,129,189);
+	} */
+
+
+
+
 	</style>
 </head>
 <body>
