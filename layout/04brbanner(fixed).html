@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>brbanner</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		.content{
+			height: 1000px;
+			background:linear-gradient(#ccc,#FFF);
+		}
+		.brAd{
+			width:400px;
+			height:300px;
+			position: fixed;
+			right:0;
+			bottom: 0;
+		}
+		.pic{
+			position: relative;}
+		.pic a img{
+			width: 400px;
+			height: 300px;
+		}
+		.pic #closeBtn{
+			background: url(http://www.easyicon.net/api/resizeApi.php?id=1191663&size=128) no-repeat;
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			position: absolute;
+			top: 5px;
+			right: 5px;
+		.hide{
+			display: none;
+		}
+		}
+	</style>
+	<script>
+		window.onload=function(){
+			var TipBox=document.getElementById("tipCon")
+			var CloseBtn=document.getElementById("closeBtn")
+			CloseBtn.onclick=function(){
+/*				Method1
+				TipBox.style.display="none";*/
+/*				Method2 好处在于可以增加类 类内可以写很多样式*/
+				TipBox.className="hide";
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="content"></div>
+	<div class="brAd" id="tipCon">
+		<div class="pic">
+			<a href="http://www.esteelauder.com.cn/">
+			<img src="http://pic17.nipic.com/20111024/8565101_114548562133_2.jpg"></a>
+			<a href="javascript:void(0);" id="closeBtn"></a>
+		</div>
+		
+	</div>
+	<div>
+		
+	</div>	
+</body>
+</html>
