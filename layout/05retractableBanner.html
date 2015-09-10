@@ -4,19 +4,21 @@
 	<meta charset="UTF-8">
 	<title>Retractable Banner</title>
 	<style>
-		*{margin: 0;padding: 0;}
-		#content{
-			margin: 0 auto;
-			width:960px;
-			height:1000px;
-			background: #ccc;
-		}
+		div,img,body{margin: 0;padding: 0;}
 		#banner{
-			width:986px;
-			margin:0 auto;
+			width:1350px;
+			margin: 0 auto;
+			/* margin:0 auto; */
 			display: none;
-/* 			position: relative;
-overflow: hidden; */
+			/*position: relative;
+			overflow: hidden; */
+			/* overflow: hidden; */
+		}
+		#content{
+			width:1350px;
+			height: 900px;
+			/* margin: 0 auto; */
+			/* background: #ccc; */
 		}
 		#content img#shot{
 			width:100%;
@@ -27,25 +29,37 @@ overflow: hidden; */
 </head>
 <body>
 	<div id="banner">
-		<img id="imgBanner" src="images/retractableBanner.jpg" style="width:986px height:675px" >
+		<img id="imgBanner" src="images/retractableBanner.jpg" width="1350" height="800">
 	</div>
 	<div id="content">
-		<img id="shot" src="images/githubScreenShot.png">
+		<img id="shot" src="images/nasaWebsiteScreenShot.jpg">
 	</div>
-	<script>
+<script>
 		var obanner =document.getElementById("banner");
 		var oimgBanner =document.getElementById("imgBanner");
 		var h=0;
+		var step=2;
 		var maxH=oimgBanner.height;
+		/*		console.log(maxH);*/
 		function bannerDown(){
 			obanner.style.height=h+"px";
 			obanner.style.display="block";
 			if(h<maxH){
-				h+=5;
+				h+=step;
 				setTimeout(bannerDown,1);
+				console.log(h);
+			}else{;
+				setTimeout(bannerUp,3000);
 			}
 		}
-	setTimeout(bannerDown,3000);
+		function bannerUp(){
+			if(h>0){
+				h-=step;
+				obanner.style.height=h+"px";
+				setTimeout(bannerUp,1)
+			}
+		}
+		setTimeout(bannerDown,3000);
 	</script>
 </body>
 </html>
